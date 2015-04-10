@@ -21,7 +21,7 @@ function check(drive, callback)
 
 	if (os.type() == 'Windows_NT') //Windows
 	{
-		child_process.exec(path.join(__dirname, 'drivespace.exe') + ' drive-' + drive, function(error, stdout, stderr)
+		child_process.exec('"' + path.join(__dirname, 'drivespace.exe') + '" drive-' + drive, function(error, stdout, stderr)
 		{
 			if (error)
 			{
